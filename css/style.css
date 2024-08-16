@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 30px solid #149b14;
+  background: linear-gradient(#25b8f0 30%, #abe8ff 100%);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn.music {
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+}
+
+.btn.music:hover {
+  background-color: #abe8ff;
+  border: none;
+  margin: 10px;
+}
+
+.sound_icon {
+  width: 25px;
+  height: auto;
+  align-item: right;
+}
+
+.clouds {
+  position: absolute;
+  width: 500px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: mario-jump 500ms ease-out;
+}
+
+@keyframes clouds-animation {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes mario-jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 150px;
+  }
+  50% {
+    bottom: 150px;
+  }
+  60% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
